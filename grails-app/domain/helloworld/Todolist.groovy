@@ -2,6 +2,5 @@ package helloworld
 
 class Todolist {
 
-    static constraints = {
-    }
+    String Todoitem
 }
