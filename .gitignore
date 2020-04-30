@@ -1,5 +1,3 @@
-/data
-
 # Output
 /target
 /classes
@@ -8,6 +6,11 @@
 /logs
 *.log
 *.class
+*.asscache
+
+# Editors
+*.sublime-workspace
+.idea/
 
 # MacOS junk
 .DS_Store

@@ -2,5 +2,13 @@ package helloworld
 
 class Todolist {
 
-    String Todoitem
+    Date   dateCreated = new Date()
+    String description
+    String name
+    String sharing
+
+    static constraints = {
+        description nullable: true
+        sharing inList: ['public', 'private']
+    }
 }
