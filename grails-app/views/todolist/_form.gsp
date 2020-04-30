@@ -1,14 +1,10 @@
 <%@ page import="helloworld.Todolist" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: todolistInstance, field: 'description', 'error')} ">
 	<label for="description">
-		<g:message code="todolist.description.label" default="Description" />
-		
+		<g:message code="todolist.description.label" default="Description" />	
 	</label>
 	<g:textField name="description" value="${todolistInstance?.description}"/>
-
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: todolistInstance, field: 'sharing', 'error')} required">
@@ -17,7 +13,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:select name="sharing" from="${todolistInstance.constraints.sharing.inList}" required="" value="${todolistInstance?.sharing}" valueMessagePrefix="todolist.sharing"/>
-
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: todolistInstance, field: 'name', 'error')} required">
@@ -26,6 +21,4 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="name" required="" value="${todolistInstance?.name}"/>
-
 </div>
-
