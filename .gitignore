@@ -1,0 +1,13 @@
+/data
+
+# Output
+/target
+/classes
+/bin
+/out
+/logs
+*.log
+*.class
+
+# MacOS junk
+.DS_Store
