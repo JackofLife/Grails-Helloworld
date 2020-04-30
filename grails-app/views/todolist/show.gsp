@@ -23,11 +23,38 @@
 			</g:if>
 			<ol class="property-list todolist">
 			
-				<g:if test="${todolistInstance?.todoitem}">
+				<g:if test="${todolistInstance?.description}">
 				<li class="fieldcontain">
-					<span id="todoitem-label" class="property-label"><g:message code="todolist.todoitem.label" default="Todoitem" /></span>
+					<span id="description-label" class="property-label"><g:message code="todolist.description.label" default="Description" /></span>
 					
-						<span class="property-value" aria-labelledby="todoitem-label"><g:fieldValue bean="${todolistInstance}" field="todoitem"/></span>
+						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${todolistInstance}" field="description"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${todolistInstance?.sharing}">
+				<li class="fieldcontain">
+					<span id="sharing-label" class="property-label"><g:message code="todolist.sharing.label" default="Sharing" /></span>
+					
+						<span class="property-value" aria-labelledby="sharing-label"><g:fieldValue bean="${todolistInstance}" field="sharing"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${todolistInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="todolist.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${todolistInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${todolistInstance?.name}">
+				<li class="fieldcontain">
+					<span id="name-label" class="property-label"><g:message code="todolist.name.label" default="Name" /></span>
+					
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${todolistInstance}" field="name"/></span>
 					
 				</li>
 				</g:if>

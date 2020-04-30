@@ -24,7 +24,13 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="todoitem" title="${message(code: 'todolist.todoitem.label', default: 'Todoitem')}" />
+						<g:sortableColumn property="description" title="${message(code: 'todolist.description.label', default: 'Description')}" />
+					
+						<g:sortableColumn property="sharing" title="${message(code: 'todolist.sharing.label', default: 'Sharing')}" />
+					
+						<g:sortableColumn property="dateCreated" title="${message(code: 'todolist.dateCreated.label', default: 'Date Created')}" />
+					
+						<g:sortableColumn property="name" title="${message(code: 'todolist.name.label', default: 'Name')}" />
 					
 					</tr>
 				</thead>
@@ -32,7 +38,13 @@
 				<g:each in="${todolistInstanceList}" status="i" var="todolistInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${todolistInstance.id}">${fieldValue(bean: todolistInstance, field: "todoitem")}</g:link></td>
+						<td><g:link action="show" id="${todolistInstance.id}">${fieldValue(bean: todolistInstance, field: "description")}</g:link></td>
+					
+						<td>${fieldValue(bean: todolistInstance, field: "sharing")}</td>
+					
+						<td><g:formatDate date="${todolistInstance.dateCreated}" /></td>
+					
+						<td>${fieldValue(bean: todolistInstance, field: "name")}</td>
 					
 					</tr>
 				</g:each>
